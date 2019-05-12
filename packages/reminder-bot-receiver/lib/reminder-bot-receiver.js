@@ -1,8 +1,15 @@
 // packages/reminder-bot-receiver/lib/reminder-bot-receiver.js
-exports.reminderBotReceiver = (event, context) => {
- const pubSubMessage = event;
- const name = pubSubMessage.data ?
-  Buffer.from(pubSubMessage.data, 'base64').toString() :
-  'World';
-console.log(`Cześć, ${name}!`);
+const EVENT_HANDLERS = require('./event-handlers')
+exports.reminderBotReceiver = async (event, context) => {
+  console.log(`Input received:
+    Event: ${JSON.stringify(event)}
+    Context: ${JSON.stringify(context)}`)
+// See https://developers.google.com/hangouts/chat/reference/message-formats/events#event_fields
+  const chatEventBody = JSON.parse(Buffer.from(event.data, 'base64').toString())
+  console.log('Chat event body:', chatEventBody)
+try {
+    EVENT_HANDLERS[chatEventBody.type](chatEventBody)
+  } catch (error) {
+    console.error(new Error(`Couldn't process event due to: ${error}`))
+  }
 };

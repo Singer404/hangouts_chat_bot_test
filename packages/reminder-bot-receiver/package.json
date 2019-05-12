@@ -23,5 +23,8 @@
   },
   "bugs": {
     "url": "https://github.com/Singer404/hangouts_chat_bot_test/issues"
+  },
+    "dependencies": {
+    "chrono-node": "^1.3.5"
   }
 }
