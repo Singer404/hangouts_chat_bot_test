@@ -1,0 +1,27 @@
+{
+  "name": "reminder-bot-receiver",
+  "version": "1.0.0",
+  "description": "eobuwie chat bot receiver",
+  "author": "singer404 <mspiewak@eobuwie.com.pl>",
+  "homepage": "https://github.com/Singer404/hangouts_chat_bot_test#readme",
+  "license": "ISC",
+  "main": "lib/reminder-bot-receiver.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Singer404/hangouts_chat_bot_test.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "deploy": "gcloud functions deploy reminderBotReceiver --runtime nodejs8 --trigger-topic reminder-bot-messages-in"
+  },
+  "bugs": {
+    "url": "https://github.com/Singer404/hangouts_chat_bot_test/issues"
+  }
+}

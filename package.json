@@ -1,0 +1,20 @@
+{
+  "name": "serverles_eobuwie__chatbot",
+  "version": "0.0.1",
+  "description": "Serverless hangouts chat bot ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:reminder-bot-receiver": "lerna run deploy --stream --scope=\"reminder-bot-receiver\""
+  },
+  "keywords": [
+    "hangouts",
+    "chat",
+    "bot"
+  ],
+  "author": "Singer",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.13.4"
+  }
+}

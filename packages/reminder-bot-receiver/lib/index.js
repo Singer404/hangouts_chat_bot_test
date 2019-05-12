@@ -1,0 +1,9 @@
+// packages/reminder-bot-receiver/lib/event-handlers/index.js
+const addedToSpace = require('./added-to-space')
+const message = require('./message')
+// Keys represent event types.
+// See https://developers.google.com/hangouts/chat/reference/message-formats/events#event_types
+module.exports = {
+    ADDED_TO_SPACE: addedToSpace,
+    MESSAGE: message
+}
