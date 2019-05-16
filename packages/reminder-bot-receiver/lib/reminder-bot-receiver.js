@@ -8,7 +8,7 @@ exports.reminderBotReceiver = async (event, context) => {
   const chatEventBody = JSON.parse(Buffer.from(event.data, 'base64').toString())
   console.log('Chat event body:', chatEventBody)
 try {
-    EVENT_HANDLERS[chatEventBody.type](chatEventBody)
+   await EVENT_HANDLERS[chatEventBody.type](chatEventBody)
   } catch (error) {
     console.error(new Error(`Couldn't process event due to: ${error}`))
   }
