@@ -1,0 +1,27 @@
+{
+  "name": "reminder-bot-sender",
+  "version": "1.0.0",
+  "description": "bot sender module",
+  "author": "singer404 <mspiewak@eobuwie.com.pl>",
+  "homepage": "https://github.com/Singer404/hangouts_chat_bot_test#readme",
+  "license": "ISC",
+  "main": "lib/reminder-bot-sender.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Singer404/hangouts_chat_bot_test.git"
+  },
+  "scripts": {
+    "deploy": "gcloud functions deploy reminderBotSender --runtime nodejs8 --trigger-topic reminder-bot-messages-out",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Singer404/hangouts_chat_bot_test/issues"
+  }
+}
