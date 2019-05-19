@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:reminder-bot-receiver": "lerna run deploy --stream --scope=\"reminder-bot-receiver\""
+    "deploy:reminder-bot-receiver": "lerna run deploy --stream --scope=\"reminder-bot-receiver\"",
+    "deploy:reminder-bot-sender": "lerna run deploy --stream --scope=\"reminder-bot-sender\""
   },
   "keywords": [
     "hangouts",
